@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>decompose URL</h2>
+    <form>
+        <label>Enter the url</label>
+        <input type="text" id="i1" name="urlinput">
+        <button type="button" onclick="decomposeurl()">Decompose</button>
+    </form>
+    <div id="result"></div>
+    <script>
+
+        var url=document.getElementById("i1").value;
+
+        var protocol=url.protocol.replace(":","");
+        var domain=url.hostname.replace("/","");
+        var page=url.page;
+        var extension=url.pathname.split(".").pop();
+
+        document.getElementById("result").innerHTML= "protocol:" +protocol + "domain:" + domain + "page: " +page + "extension:" + extension;
+         
+    </script>
+</body>
+</html>

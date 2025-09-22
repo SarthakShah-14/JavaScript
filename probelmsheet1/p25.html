@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display Form Elements and Values</title>
+</head>
+<body>
+
+
+<form id="myForm">
+  <label for="nameInput">Name:</label><br>
+  <input type="text" id="nameInput" name="nameInput"><br><br>
+  
+  <label for="emailInput">Email:</label><br>
+  <input type="email" id="emailInput" name="emailInput"><br><br>
+  
+  <label for="genderInput">Gender:</label><br>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br><br>
+  
+  <label for="ageInput">Age:</label><br>
+  <input type="number" id="ageInput" name="ageInput"><br><br>
+  
+  <label for="countryInput">Country:</label><br>
+  <select id="countryInput" name="countryInput">
+    <option value="USA">USA</option>
+    <option value="Canada">Canada</option>
+    <option value="UK">UK</option>
+    <option value="Australia">Australia</option>
+  </select><br><br>
+  
+  <label for="commentsInput">Comments:</label><br>
+  <textarea id="commentsInput" name="commentsInput"></textarea><br><br>
+  
+  <button type="button" onclick="displayFormElements()">Display Form Data</button>
+</form>
+
+
+<div id="displayArea"></div>
+
+<script>
+
+function displayFormElements() {
+ 
+  let form = document.getElementById("myForm");
+  
+  
+  let formElements = form.elements;
+  
+  
+  let formData = "";
+  
+  
+  for (let i = 0; i < formElements.length; i++) {
+   
+    if (formElements[i].tagName === "INPUT" || formElements[i].tagName === "TEXTAREA" || formElements[i].tagName === "SELECT") {
+      
+      formData += formElements[i].name + ": " + formElements[i].value + "<br>";
+    }
+  }
+  
+  
+  document.getElementById("displayArea").innerHTML = formData;
+}
+</script>
+
+</body>
+</html>

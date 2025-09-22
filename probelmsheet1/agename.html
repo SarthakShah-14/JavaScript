@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+       
+        var age1=document.getElementById("age").value;
+
+
+        function namevalidation()
+        {
+            var name1=document.getElementById("name").value;
+
+            if(name1.value==="")
+            {
+                document.getElementById("nameError").innerHTML="name should not blank";
+                name1.focus();
+                return false;
+            }
+            else{
+                
+                document.getElementById("nameError").innerHTML="";
+                return true;
+            }
+        }
+        function agevalidation() 
+        {
+            if (age1.value < 15 || age1.value > 20) 
+            {
+                document.getElementById("ageError").innerHTML = "Age should be between 15 and 20";
+                age1.focus();
+                return false;
+            } else 
+            {
+                document.getElementById("ageError").innerHTML = "";
+                return true;
+            }
+        }
+
+
+    </script>
+
+
+
+    <form action="abc.html">
+
+        name: <input type="text" id="name" oninput="namevalidation()" required><br><br>
+        age:  <input type="age" id="age" oninput="agevalidation()" required><br><br>
+
+        <input type="submit" name="submit">
+    </form>
+</body>
+</html>

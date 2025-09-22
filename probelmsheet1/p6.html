@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Convert the first letter of string to uppercase</h2>
+    <form>
+        <label>Enter the string:</label>
+        <input type="text" id="i1" name="textbox">
+        <button type="button" onclick="ucase()">check</button>
+        
+    </form>
+
+    <script>
+        function ucase() 
+        {
+            var str=document.getElementById("i1").value;
+            var s=str.split(" ");
+            var a;
+            for(var i=0;i<s.length;i++)
+            {
+                s[i]=s[i][0].toUpperCase() + s[i].substring(1);
+
+            }
+              a=s.join(" ");
+
+              document.getElementById("result").innerHTML= " string is " + a
+
+        }
+    </script>
+    <div id="result"></div>
+</body>
+</html>

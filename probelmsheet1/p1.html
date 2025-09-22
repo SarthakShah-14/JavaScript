@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        Enter the number:
+        <input type="text" name="number" id="num"><br>
+        <input type="button" value="click" onclick="rev()"><br>
+        <h1 id="my"></h1>
+    </div>
+</body>
+<script>
+    function rev()
+    {
+        var a=num.value;
+
+        var b=a.toString().split("").reverse().join("");
+        my.innerHTML=b;
+    }
+</script>
+
+</html>

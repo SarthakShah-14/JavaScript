@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      //  working method -01
+    // var arr=[10,30,15,25,13];
+     //document.write("Array elements are:"+arr);
+    //arr.sort((a,b)=>{return a-b});    
+    //alert("The Sorted array is:"+arr);
+    //alert("The largest element in the array is:"+arr[4]);
+
+    // trying another method making a callback function or short hand function
+    //  method -02
+
+    var arr=[10,30,15,25,13];
+    document.write("Array elements are:"+arr);
+    arr.sort(function(a,b)
+{
+    return a-b;
+});
+alert("The Sorted array is:"+arr);
+alert("The largest element in the array is:"+arr[4]);
+    
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

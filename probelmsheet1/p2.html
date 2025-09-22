@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Enter temprature :</h2>
+
+    <input type="text" name="number" id="num"><br><br>
+    <button type="submit" onclick="Fahrenheit()" >Fahrenheit</button>
+
+   
+    <button type="submit" onclick="Celsius()" >Celsius</button>
+        
+        <p id="s1"></p>
+
+            <script>
+                function Fahrenheit()
+                {
+                let t=document.getElementById("num").value;
+
+                let f=((t * 9)/5+32);
+                alert("Fahrenheit:"+f)
+                }
+
+                function Celsius()
+                {
+                let t=document.getElementById("num").value;
+
+                let c=(t - 32)*5/9;
+                alert("Celsius:"+c)
+                }
+
+
+       
+            </script>
+
+
+</body>
+</html>

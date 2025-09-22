@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Rows to Table</title>
+
+<h2> Write a JavaScript function to add rows to a table.</h2>
+</head>
+<body>
+
+
+<table id="myTable" border="1">
+  <thead>
+    <tr>
+      <th>Column 1</th>
+      <th>Column 2</th>
+      <th>Column 3</th>
+    </tr>
+  </thead>
+  <tbody>
+   
+    <tr>
+      <td>Existing Data 1</td>
+      <td>Existing Data 2</td>
+      <td>Existing Data 3</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<button onclick="addRow()">Add Row</button>
+
+<script>
+
+function addRow() {
+
+  let table = document.getElementById("myTable");
+
+  
+  let newRow = table.insertRow();
+
+  
+  let cell1 = newRow.insertCell();
+  cell1.appendChild(document.createTextNode("New Cell 1"));
+  
+  let cell2 = newRow.insertCell();
+  cell2.appendChild(document.createTextNode("New Cell 2"));
+  
+  let cell3 = newRow.insertCell();
+  cell3.appendChild(document.createTextNode("New Cell 3"));
+}
+</script>
+
+</body>
+</html>

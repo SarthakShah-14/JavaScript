@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Minutes</title>
+</head>
+<body>
+    <script>
+        function add() 
+        {
+            let cur_date_time = new Date();
+            let minutes = document.getElementById("i1").value;
+
+            if (!minutes) 
+            {
+                alert("Please enter a valid number of minutes");
+            } 
+            else 
+            {
+                let new_date_time = new Date(cur_date_time.getTime() + minutes * 60000);
+                document.getElementById("result").innerHTML = 'Current date and time: ' + cur_date_time;
+                document.getElementById("result").innerHTML += '<br>  New date and time: ' + new_date_time;
+            }
+        }
+    </script>
+
+    <h2>Add Minutes</h2>
+    <form>
+        <label>Enter the minutes:</label>
+        <input type="minutes" id="i1" name="textbox">
+        <button type="button" onclick="add()">Add Minutes</button>
+    </form>
+
+    <div id="result"></div>
+</body>
+</html>

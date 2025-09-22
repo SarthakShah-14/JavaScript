@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // http://www.google.com/page1.html
+        
+        let link=prompt("Enter URL:");
+        let i=0;
+        let Split1=" ";
+
+        Split1 = link.split(':');
+        document.write("Protocol: "+Split1[0]);
+   
+        Split1[1][0]='\0';
+        Split1[1][1]='\0';
+        
+        domain = Split1[1].split('/');
+        let page = domain[3].split('.');
+        document.write("<br>Domain: "+domain[2]);
+        document.write("<br>Page : "+page[0]);
+        document.write("<br>Extension : "+page[1]);
+
+    //    var str= prompt("Enter link:");
+    //    document.write("The entered link is:"+str+"<br>");
+    //    var i=0;
+    //    var convertedArr; 
+    //    while(str[i]!=null)
+    //    {
+    //     if(str[i]==":"||str[i]=="/"||str[i]==" ")
+    //    {
+    //     convertedArr= str[i].split("+");
+    //    }
+    //    else if(str[i]=="/")
+    //    {
+    //     convertedArr=str[i].split("+");
+    //    }
+    //    else if(str[i]==" ")
+    //    {
+    //     convertedArr=str[i].split("+");
+    //    }
+    //    i++;
+    //    }
+       //var st;
+      
+      // document.write("Output"+"<br>"+"Decomposed URL:"+convertedArr);
+       
+
+        
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

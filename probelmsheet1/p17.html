@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> merge sort</h2>
+    <form>
+        <label for="inputarray">Enter the number</label>
+        <input type="text" id="i1" placeholder="e.g ,str1,str2,str3">
+        <button type="button" onclick="join()">join array</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        
+        function join()
+        {   
+            var inputarray=document.getElementById("i1").value;
+            var array=inputarray.split(",");
+
+            var output=array.join("+");
+
+            document.getElementById("result").innerHTML="The string is " + output;
+
+
+        }
+    </script>
+</body>
+</html>

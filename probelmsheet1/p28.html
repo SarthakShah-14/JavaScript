@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Window Size</title>
+</head>
+<body>
+
+
+<div id="sizeDisplay"></div>
+
+<script>
+
+function updateWindowSize() {
+ 
+  let windowWidth = window.innerWidth;
+  let windowHeight = window.innerHeight;
+  
+ 
+  document.getElementById("sizeDisplay").innerHTML = "Window Width: " + windowWidth + "px<br>Window Height: " + windowHeight + "px";
+}
+
+
+window.onload = updateWindowSize;
+
+
+window.addEventListener("resize", updateWindowSize);
+</script>
+
+</body>
+</html>

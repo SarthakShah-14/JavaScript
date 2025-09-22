@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Longest character of the string</h2>
+    <form>
+        <label>Enter the string:</label>
+        <input type="text" id="i1" name="textbox">
+        <br>
+        <button type="button" onclick="lstring()">check</button>
+        
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function lstring()
+        {
+             var str=document.getElementById("i1").value;
+             const words=str.split(" ");
+             let lword=" ";
+
+             for(let i=0;i<words.length;i++)
+             {
+                if(words[i].length>lword.length)
+                {
+                    lword=words[i];
+                }
+             }
+
+             document.getElementById("result").innerHTML = " Longest word of the string is " + lword 
+        }
+    </script>
+</body>
+</html>

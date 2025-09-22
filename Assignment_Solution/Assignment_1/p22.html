@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //not happening
+        // Write a program to count and display all H1 elements on the document
+   
+
+      
+function countH1() {
+    let c= document.getElementsByTagName('h1').length;
+      // let c= document.getElementsByTagName('h1');
+     //  console.log("The number of h1 tag in this document= "+c);
+    alert("Total H1 elements: " + c);
+}
+
+    </script>
+</head>
+<body>
+   
+
+    <h1 id="1"> Hello </h1><br>
+    <h1 id="2"> Hi </h1><br>
+    <h1 id="3"> How </h1><br>
+    <h1 id="4"> are </h1><br>
+    <h1 id="5"> you? </h1><br>
+    <button onclick="countH1()">Count H1</button>
+</body>
+</html>

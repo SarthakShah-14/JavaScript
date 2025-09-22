@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js\validation.js"> </script>
+    <script>
+        function validate_form()
+        {
+            let name1=document.getElementById("name1");
+            let email1=document.getElementById("email1");
+
+            let err_name=document.getElementById("err_name");
+            let err_email=document.getElementById("err_email");
+            if(validate_name(name1,err_name)==true && validate_email(email1,err_email)==true)
+        {
+            alert("All fields are valid");
+            return false;
+
+        }
+           
+        else{
+            alert("invalid data");
+            return false;
+        }
+            
+        
+        }
+    </script>
+</head>
+<body onload="document.getElementById('name1').focus()">
+    <h1>
+        Form handling and validation 
+    </h1>
+    <form onsubmit="return validate_form()">
+        Enter Name:<input type="text" id="name1" name="name1" oninput="validate_name(this,document.getElementById('err_name'))"><span id="err_name"  style="color:red;"></span><br>
+        Enter Email:<input type="text" id="email1" name="email1"oninput="validate_email(this,document.getElementById('err_email'))"><span id="err_email" style="color:red;"></span><br>
+        <input type="submit" value="Submit">
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Get extension of file</h2>
+    <form>
+        <label>Enter the string:</label>
+        <input type="text" id="i1" name="textbox">
+        <button type="button" onclick="ext()">check</button>
+        
+    </form>
+    
+    <div id="result"></div>
+    <script>
+
+        function ext()
+        {
+            var str=document.getElementById("i1").value;
+            var s;
+
+            s=(str.split(".").pop());
+
+            document.getElementById("result").innerHTML = " The extention of file is " + s 
+
+
+
+        }
+
+    </script>
+
+   
+</body>
+</html>

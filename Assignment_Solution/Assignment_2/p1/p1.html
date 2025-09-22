@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bill Calculator</title>
+    <link rel="stylesheet" type="text/css" href="p1.css">
+    <script defer src="p1.js"></script>
+</head>
+<body>
+    <h2>Bill Calculator</h2>
+    <label>Bill No:</label>
+    <input type="text" id="billNo" required>
+    
+    <label>Bill Date:</label>
+    <input type="date" id="billDate" required>
+    
+    <label>Bill Amount:</label>
+    <input type="number" id="billAmount" required>
+    
+    <button onclick="calculateBill()">Calculate</button>
+    
+    <h3>Results:</h3>
+    <p>Discount: <span id="discount"></span></p>
+    <p>Tax (5%): <span id="tax"></span></p>
+    <p>Net Payment: <span id="netPayment"></span></p>
+</body>
+</html>

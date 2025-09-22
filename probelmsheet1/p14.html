@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compute Sum of Array</title>
+</head>
+<body>
+
+<!-- Form to input array elements -->
+<form id="inputForm">
+  <label for="arrayInput">Enter array elements (separated by commas):</label><br>
+  <input type="text" id="arrayInput" name="arrayInput" required><br><br>
+  <button type="submit">Compute Sum</button>
+</form>
+
+<script>
+
+function computeSum(array) {
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum += parseInt(array[i]);
+  }
+  return sum;
+}
+
+
+document.getElementById("inputForm").addEventListener("submit", function(event) {
+  event.preventDefault(); 
+  
+ 
+  let inputArray = document.getElementById("arrayInput").value.split(",");
+  
+  
+  let sum = computeSum(inputArray);
+  
+  
+  alert("The sum of the array elements is: " + sum);
+});
+</script>
+
+</body>
+</html>

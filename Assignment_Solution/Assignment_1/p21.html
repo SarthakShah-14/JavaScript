@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addRow() {
+            let table = document.getElementById("myTable");
+            let row = table.insertRow();
+            row.insertCell(0).innerHTML = "John Doe";
+            row.insertCell(1).innerHTML = "25";
+        }
+        </script>
+</head>
+<body>
+    <table id="myTable" border="1">
+        <tr><th>Name</th><th>Age</th></tr>
+    </table>
+    <button onclick="addRow()">Add Row</button>
+</body>
+</html>

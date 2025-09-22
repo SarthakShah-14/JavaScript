@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Difference Calculator</title>
+</head>
+<body>
+    <script>
+        function Difference() 
+        {
+            let d1 = new Date(document.getElementById("i1").value);
+            let d2 = new Date(document.getElementById("i2").value);
+
+            if ( isNaN(d1)  || isNaN(d2)) 
+            {
+                alert("Please enter valid dates");
+            }
+            else
+            {
+                let time_diff = d2 - d1;
+                let day_diff = time_diff / (1000 * 60 * 60 * 24);
+                document.getElementById("result").innerHTML = 'Days Difference : ' + day_diff;
+            }
+
+            
+        }
+    </script>
+
+    <h2>Difference between dates</h2>
+    <form>
+        <label>Enter the first date:</label><br>
+        <input type="date" id="i1" name="textbox">
+        <br>
+
+        <label>Enter the second date:</label><br>
+        <input type="date" id="i2" name="textbox">
+        <br>
+        <button type="button" onclick="Difference()">Difference</button>
+    </form>
+
+    <div id="result"></div>
+</body>
+</html>

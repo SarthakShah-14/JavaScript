@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Populate Combo from Array</title>
+</head>
+<body>
+
+
+<select id="dropdown"></select>
+
+
+<button onclick="populateCombo()">Populate Combo</button>
+
+<script>
+
+function populateCombo() {
+  
+  let arrayElements = ["Option 1", "Option 2", "Option 3", "Option 4", "Option 5"];
+  
+ 
+  let dropdown = document.getElementById("dropdown");
+  
+  
+  dropdown.innerHTML = "";
+  
+  
+  for (let i = 0; i < arrayElements.length; i++) {
+    let option = document.createElement("option");
+    option.text = arrayElements[i];
+    dropdown.add(option);
+  }
+}
+</script>
+
+</body>
+</html>

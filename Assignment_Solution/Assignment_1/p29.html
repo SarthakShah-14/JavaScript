@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value.trim();
+            let age = document.getElementById("age").value;
+            let gender = document.querySelector('input[name="gender"]:checked');
+            let message = document.getElementById("message");
+        
+            if (!name) {
+                message.innerHTML = "Name cannot be blank";
+                message.style.color = "red";
+                return;
+            }
+            if (age < 15 || age > 20) {
+                message.innerHTML = "Age must be between 15 and 20";
+                message.style.color = "red";
+                return;
+            }
+            if (!gender) {
+                message.innerHTML = "Please select a gender";
+                message.style.color = "red";
+                return;
+            }
+        
+            message.innerHTML = "Form submitted successfully!";
+            message.style.color = "green";
+        }
+        </script> 
+</head>
+<body>
+    <form id="validateForm">
+        Name: <input type="text" id="name"><br>
+        Age: <input type="number" id="age"><br>
+        Gender:
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female<br>
+        <button type="button" onclick="validateForm()">Submit</button>
+        <p id="message"></p>
+    </form>
+</body>
+</html>

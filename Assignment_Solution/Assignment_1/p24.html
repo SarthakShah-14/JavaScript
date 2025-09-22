@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function resizeImage() {
+            let img = document.getElementById("resizableImg");
+            img.width = document.getElementById("imgWidth").value;
+            img.height = document.getElementById("imgHeight").value;
+        }
+        </script>
+</head>
+<body>
+    <input type="number" id="imgWidth" placeholder="Enter width">
+<input type="number" id="imgHeight" placeholder="Enter height">
+<button onclick="resizeImage()">Resize Image</button>
+<img id="resizableImg" src="F:\sem4_220\JS\Assignment_Solution\Assignment_1\image.png" width="200" height="150">
+</body>
+</html>

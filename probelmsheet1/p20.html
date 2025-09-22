@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Attributes</title>
+</head>
+<body>
+
+
+<a id="hyperlink" href="https://www.google.com" hreflang="en" rel="nofollow" target="_blank" type="text/html">Example Hyperlink</a><br><br>
+
+
+<img id="image" src="Screenshot 2024-02-10 080042.png " alt="Example Image" hreflang="en" rel="nofollow" target="_blank" type="image/jpeg">
+
+<script>
+
+function getAttributes() {
+  
+  let hyperlink = document.getElementById("hyperlink");
+  
+  
+  let image = document.getElementById("image");
+  
+ 
+  console.log("Hyperlink Attributes:");
+  console.log("href:", hyperlink.getAttribute("href"));
+  console.log("hreflang:", hyperlink.getAttribute("hreflang"));
+  console.log("rel:", hyperlink.getAttribute("rel"));
+  console.log("target:", hyperlink.getAttribute("target"));
+  console.log("type:", hyperlink.getAttribute("type"));
+  
+  
+  console.log("\nImage Attributes:");
+  console.log("src:", image.getAttribute("src"));
+  console.log("alt:", image.getAttribute("alt"));
+  console.log("hreflang:", image.getAttribute("hreflang"));
+  console.log("rel:", image.getAttribute("rel"));
+  console.log("target:", image.getAttribute("target"));
+  console.log("type:", image.getAttribute("type"));
+}
+
+
+window.onload = getAttributes;
+</script>
+
+</body>
+</html>

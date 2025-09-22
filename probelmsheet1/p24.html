@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Image Dimensions</title>
+</head>
+<body>
+
+
+<label for="heightInput">Enter height (in pixels):</label><br>
+<input type="number" id="heightInput" name="heightInput"><br><br>
+
+<label for="widthInput">Enter width (in pixels):</label><br>
+<input type="number" id="widthInput" name="widthInput"><br><br>
+
+<button onclick="changeImageDimensions()">Change Dimensions</button><br><br>
+
+
+<img id="resizeImage" src="https://via.placeholder.com/150" alt="Resize Image">
+
+<script>
+
+function changeImageDimensions() {
+  
+  let heightValue = document.getElementById("heightInput").value;
+  let widthValue = document.getElementById("widthInput").value;
+  
+
+  let image = document.getElementById("resizeImage");
+  
+  
+  image.style.height = heightValue + "px";
+  image.style.width = widthValue + "px";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <from>
+        <label for="input">Enter the string</label>
+        <input type="text" id="i1" name="inputstring">
+        <button type="button" onclick="stoa()">convert</button>
+    </from>
+
+    <div id="result"></div>
+
+    <script>
+        function stoa()
+        {
+            var inputstring=document.getElementById("i1").value;
+            var myarray=inputstring.split(' ');
+
+            document.getElementById("result").innerHTML=" Your Array is " + myarray;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+function getAttributes() {
+    let link = document.getElementById("myLink");
+    let image = document.getElementById("myImage");
+
+    alert(`Hyperlink Attributes:
+    href: ${link.href}
+    hreflang: ${link.hreflang}
+    rel: ${link.rel}
+    target: ${link.target}
+    type: ${link.type}`);
+
+    alert(`Image Attributes:
+    src: ${image.src}
+    alt: ${image.alt}
+    width: ${image.width}
+    height: ${image.height}`);
+}
+
+
+    </script>
+</head>
+<body>
+    <a id="myLink" href="https://google.com" hreflang="en" rel="nofollow" target="_blank" type="text/html">Example</a>
+<img id="myImage" src="F:\sem4_220\JS\Assignment_Solution\Assignment_1\image.png" alt="Sample Image" width="200" height="150">
+
+<button onclick="getAttributes()">Get Attributes</button>
+</body>
+</html>

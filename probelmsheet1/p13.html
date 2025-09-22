@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find Largest Number</title>
+</head>
+<body>
+
+<!-- Form to input five numbers -->
+<form id="inputForm">
+  <label for="num1">Enter number 1:</label><br>
+  <input type="number" id="num1" name="num1" required><br><br>
+  
+  <label for="num2">Enter number 2:</label><br>
+  <input type="number" id="num2" name="num2" required><br><br>
+  
+  <label for="num3">Enter number 3:</label><br>
+  <input type="number" id="num3" name="num3" required><br><br>
+  
+  <label for="num4">Enter number 4:</label><br>
+  <input type="number" id="num4" name="num4" required><br><br>
+  
+  <label for="num5">Enter number 5:</label><br>
+  <input type="number" id="num5" name="num5" required><br><br>
+  
+  <button type="submit">Find Largest</button>
+</form>
+
+<script>
+// Event listener for form submission
+document.getElementById("inputForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent default form submission
+  
+  // Get the input values from the form
+  let num1 = parseFloat(document.getElementById("num1").value);
+  let num2 = parseFloat(document.getElementById("num2").value);
+  let num3 = parseFloat(document.getElementById("num3").value);
+  let num4 = parseFloat(document.getElementById("num4").value);
+  let num5 = parseFloat(document.getElementById("num5").value);
+  
+  // Find the largest number among the five
+  let largestNumber = Math.max(num1, num2, num3, num4, num5);
+  
+  // Display the result in an alert box
+  alert("The largest number is: " + largestNumber);
+});
+</script>
+
+</body>
+</html>

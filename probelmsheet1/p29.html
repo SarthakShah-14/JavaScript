@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation</title>
+</head>
+<body>
+
+    <form name="Form1">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" oninput="namevalidation()" required>
+        <span id="nameError" style="color:red"></span>
+        <br><br>
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" oninput="agevalidation()">
+        <span id="ageError" style="color:red"></span>
+        <br><br>
+        
+        <label>select gender:</label>
+        <input type="radio" name="gender" id="male" required>Male
+        <input type="radio" name="gender" id="female" required>Female
+        <span id="genderError" style="color:red"></span>
+        <br><br>
+        
+        <button type="button" onclick="formvalidate()">Submit</button>
+    </form>
+
+    <div id="div1" style="color:red"></div>
+    <div id="div2" style="color:green"></div>
+
+    <script>
+        let name1 = document.getElementById("name");
+        let age1 = document.getElementById("age");
+        let male = document.getElementById("male");
+        let female = document.getElementById("female");
+
+        function namevalidation() 
+        {
+            if (name1.value === "") 
+            {
+                document.getElementById("nameError").innerHTML = "Name should not be blank ";
+                name1.focus();
+                return false;
+            } else 
+            {
+                document.getElementById("nameError").innerHTML = "";
+                return true;
+            }
+        }
+
+        function agevalidation() 
+        {
+            if (age1.value < 15 || age1.value > 20) 
+            {
+                document.getElementById("ageError").innerHTML = "Age should be between 15 and 20";
+                age1.focus();
+                return false;
+            } else 
+            {
+                document.getElementById("ageError").innerHTML = "";
+                return true;
+            }
+        }
+
+        function formvalidate() 
+        {
+            if (namevalidation()==true && agevalidation()==true) 
+            {
+                if (male.checked==true || female.checked==true) 
+                {
+                    document.getElementById("div2").innerHTML = "Form submitted successfully";
+                    document.getElementById("genderError").innerHTML = "";
+                    document.getElementById("div1").innerHTML = "";
+                } 
+                else 
+                {
+                    document.getElementById("genderError").innerHTML = "Gender is required";
+                    
+                }
+            } else 
+            {
+                document.getElementById("div1").innerHTML = "Invalid input";
+                document.getElementById("div2").innerHTML = "";
+            }
+        }
+    </script>
+
+</body>
+</html>

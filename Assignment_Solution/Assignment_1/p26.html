@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function countDropdownItems() {
+            let count = document.getElementById("myDropdown").options.length;
+            alert("Total items: " + count);
+        }
+        </script>
+</head>
+<body>
+    <select id="myDropdown">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Cherry</option>
+    </select>
+    <button onclick="countDropdownItems()">Count Items</button>
+</body>
+</html>

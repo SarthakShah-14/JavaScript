@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Count and Display Dropdown Items</title>
+</head>
+<body>
+
+
+<select id="dropdown">
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+  <option value="3">Option 3</option>
+  <option value="4">Option 4</option>
+  <option value="5">Option 5</option>
+</select>
+
+
+<button onclick="countAndDisplayItems()">Count and Display Items</button>
+
+<script>
+
+function countAndDisplayItems() {
+  
+  let dropdown = document.getElementById("dropdown");
+  
+  
+  let itemCount = dropdown.options.length;
+  
+  
+  let itemDisplay = "Number of items: " + itemCount + "\n\n";
+  
+  
+  for (let i = 0; i < itemCount; i++) {
+    itemDisplay += "Item " + (i + 1) + ": " + dropdown.options[i].text + "\n";
+  }
+  
+  
+  alert(itemDisplay);
+}
+</script>
+
+</body>
+</html>
